@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Personal Plugins
+[Aa]ssets/Plugins/RainbowAssets*
+[Aa]ssets/BuildScripts*

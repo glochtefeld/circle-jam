@@ -17,6 +17,7 @@ namespace WOB.Player
         void Start()
         {
             movement = GetComponent<Walking>();
+            // TODO: Move player to checkpoint location
         }
 
         private void FixedUpdate()
@@ -44,4 +45,4 @@ namespace WOB.Player
     }
 }
 /* The main script that attaches to the player object. 
- * Holds and acts as an interface for all player related scripts. */
+ * Holds and acts as a bus for all player related scripts. */

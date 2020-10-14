@@ -11,6 +11,9 @@ namespace WOB.Player
         public IPlayerMovement movement;
         public PlayerInput input;
         #endregion
+        
+        // DEBUG ONLY - DELETE
+        public TMPro.TMP_Text debugText;
 
         #region Monobehaviour
         // Start is called before the first frame update
@@ -23,6 +26,8 @@ namespace WOB.Player
         private void FixedUpdate()
         {
             movement.Move(input.ReadInput());
+            if (debugText != null)
+                debugText.text = GetComponent<Rigidbody2D>().velocity.ToString();
         }
         #endregion
 

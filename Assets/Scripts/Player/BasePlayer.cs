@@ -1,10 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using WOB.Player.Movement;
 
 namespace WOB.Player
 {
+    [RequireComponent(typeof(PlayerInput))]
+    [RequireComponent(typeof(IPlayerMovement))]
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Collider2D))]
     public class BasePlayer : MonoBehaviour
     {
         #region Serialized Fields
@@ -32,20 +34,9 @@ namespace WOB.Player
         #endregion
 
         #region Switch Movement Types
-        public void SwingOnHookshot()
-        {
-            movement = GetComponent<HookshotSwing>();
-        }
-
-        public void StartWalking()
-        {
-            movement = GetComponent<Walking>();
-        }
-
-        public void StartSwimming()
-        {
-            movement = GetComponent<Swimming>();
-        }
+        public void SwingOnHookshot() => movement = GetComponent<HookshotSwing>();
+        public void StartWalking() => movement = GetComponent<Walking>();
+        public void StartSwimming() => movement = GetComponent<Swimming>();
         #endregion
     }
 }

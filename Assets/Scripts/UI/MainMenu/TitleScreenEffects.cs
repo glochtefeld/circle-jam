@@ -22,6 +22,8 @@ public class TitleScreenEffects : MonoBehaviour
     public float distance;
     public float cameraLerpTime;
     public float fadeInSpeed;
+    [Header("Constant Canvases")]
+    public Canvas mainCanvas;
     #endregion
 
     private IEnumerator _pulse;
@@ -42,7 +44,7 @@ public class TitleScreenEffects : MonoBehaviour
     {
         if (!_leftTitle && Input.anyKeyDown)
         {
-            Debug.Log($"Any key pressed");
+            // Debug.Log($"Any key pressed");
             SwitchToMainMenu();
         }
     }
@@ -126,7 +128,9 @@ public class TitleScreenEffects : MonoBehaviour
                 Vector3.Lerp(currentPos, targetPos, ratio);
             yield return null;
         }
-        _canvasSwitcher.SwitchCanvasFade(_canvasSwitcher[1], fadeInSpeed);
+        _canvasSwitcher.SwitchCanvasFade(
+            mainCanvas,
+            fadeInSpeed);
     }
 }
 /* "Animates" the title screen effects. The performance hit of 

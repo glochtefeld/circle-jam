@@ -17,13 +17,15 @@ namespace WOB.UI
         #region Monobehaviour
         private void Awake()
         {
-            // See comment below
+            // Don't count static canvas
             for (int i = 1; i < transform.childCount; i++)
             {
                 _canvasOptions.Add(
                     transform.GetChild(i).GetComponent<Canvas>());
             }
             _activeCanvas = _canvasOptions[0];
+            // Implementation detail; main canvas stays active
+            _canvasOptions.RemoveAt(1);
         }
         #endregion
 
@@ -31,6 +33,18 @@ namespace WOB.UI
         {
             _activeCanvas.gameObject.SetActive(false);
             to.gameObject.SetActive(true);
+            _activeCanvas = to;
+        }
+
+        public void TweenCanvasSwitch(Canvas to)
+        {
+            if (_activeCanvas.GetComponent<UITweener>()
+                != null)
+                _activeCanvas.GetComponent<UITweener>()
+                    .Disable();
+            _activeCanvas.gameObject.SetActive(false);
+            to.gameObject.SetActive(true);
+            to.GetComponent<UITweener>().enabled = true;
             _activeCanvas = to;
         }
 

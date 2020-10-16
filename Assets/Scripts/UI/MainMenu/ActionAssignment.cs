@@ -23,11 +23,23 @@ namespace WOB.UI
         #region Monobehaviour
         void Start()
         {
-            _start.onClick.AddListener(() => SceneManager.LoadScene(1));
-            _toOptions.onClick.AddListener(() => _switcher.SwitchCanvas(_switcher[1]));
-            _toCredits.onClick.AddListener(() => _switcher.SwitchCanvas(_switcher[2]));
-            _fromOptionsToStart.onClick.AddListener(() => _switcher.SwitchCanvas(_switcher[0]));
-            _fromCreditsToStart.onClick.AddListener(() => _switcher.SwitchCanvas(_switcher[0]));
+            // Buttons
+            _start.onClick.AddListener(() => 
+                SceneManager.LoadScene(1));
+            _toOptions.onClick.AddListener(() =>
+            {
+                _toOptions.interactable = false;
+                _switcher.TweenCanvasSwitch(_switcher[1]);
+                _toCredits.interactable = true;
+            });
+            _toCredits.onClick.AddListener(() =>
+            {
+                _toCredits.interactable = false;
+                _switcher.TweenCanvasSwitch(_switcher[2]);
+                _toOptions.interactable = true;
+            });
+            //_fromOptionsToStart.onClick.AddListener(() => _switcher.SwitchCanvas(_switcher[0]));
+            //_fromCreditsToStart.onClick.AddListener(() => _switcher.SwitchCanvas(_switcher[0]));
             _quit.onClick.AddListener(() => Application.Quit());
         }
         #endregion

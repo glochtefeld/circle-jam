@@ -1,0 +1,15 @@
+{
+    "name": "WOB",
+    "references": [
+        "GUID:10204734c5d23f546a9a356db8f1a864"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -8,26 +8,30 @@ public class SmoothCameraMovement : MonoBehaviour
     [Header("Follow")]
     [Tooltip("Insert The GameObject You Want To Follow")]
     public GameObject Player;
-    [Space]
-    public Vector3 PlayerPosition;
-    [Space]
-    public Vector3 Velocity;
-    [Space]
+    [Range(0f,1f)]
     public float Smoothness;
     #endregion
 
 
-
+    private Vector3 _velocity;
 
     void Start()
     {
-        Velocity = Vector3.zero;
+        _velocity = Vector3.zero;
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-        PlayerPosition = new Vector3(Player.transform.position.x, Player.transform.position.y, transform.position.z);
-        transform.position = Vector3.SmoothDamp(transform.position, PlayerPosition, ref Velocity, Smoothness);
+        var targetPosition = new Vector3(
+            Player.transform.position.x, 
+            Player.transform.position.y, 
+            transform.position.z);
+
+        transform.position = Vector3.SmoothDamp(
+            transform.position, 
+            targetPosition,
+            ref _velocity, 
+            Smoothness);
     }
 }

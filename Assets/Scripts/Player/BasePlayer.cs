@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using WOB.Player.Movement;
 
 namespace WOB.Player
@@ -10,30 +11,55 @@ namespace WOB.Player
     public class BasePlayer : MonoBehaviour
     {
         #region Serialized Fields
-        public IPlayerMovement movement;
         public PlayerInput input;
+        public GameObject mover;
+        [Header("Hookshot")]
+        public float cooldownTime;
+        public float speed;
+        public float maxHookTime;
         #endregion
         
+        private IPlayerMovement movement;
         #region Monobehaviour
         // Start is called before the first frame update
         void Start()
         {
-            movement = GetComponent<Walking>();
+            movement = mover.GetComponent<Walking>();
             // TODO: Move player to checkpoint location
         }
 
         private void FixedUpdate()
         {
             movement.Move(input.ReadInput());
+            if (input.Mouse())
+                ShootHook();
         }
         #endregion
 
+        public void Kill()
+        {
+
+        }
+
         #region Switch Movement Types
-        public void SwingOnHookshot() => movement = GetComponent<HookshotSwing>();
-        public void StartWalking() => movement = GetComponent<Walking>();
-        public void StartSwimming() => movement = GetComponent<Swimming>();
-        public void StartClimbing() => movement = GetComponent<Climbing>();
+        public void SwingOnHookshot() => movement = mover.GetComponent<HookshotSwing>();
+        public void StartWalking() => movement = mover.GetComponent<Walking>();
+        public void StartSwimming() => movement = mover.GetComponent<Swimming>();
+        public void StartClimbing() => movement = mover.GetComponent<Climbing>();
         #endregion
+
+        private void ShootHook() => StartCoroutine(Hook());
+
+        private IEnumerator Hook()
+        {
+            // Prevent hookshot from being fired before it retracts for 
+            // Instantiate hook
+
+            // Add force to hook instance in direction
+
+            // after x time, retract hook quickly
+            yield return null;
+        }
     }
 }
 /* The main script that attaches to the player object. 

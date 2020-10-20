@@ -60,12 +60,13 @@ namespace WOB.Player.Movement
         private const float CEIL_CHECK_RADIUS = 0.2f;
         private float _jumpPressedTime = 0f;
         private float _groundedMemoryTime = 0f;
+        private const int PIXEL_SIZE = 50;
 
         #region IPlayerMovement
         public void Move(Vector2 direction)
         {
             var crouch = direction.y < 0;
-            var move = direction.x * speed * Time.fixedDeltaTime;
+            var move = direction.x * PIXEL_SIZE * speed * Time.fixedDeltaTime;
             // Initial Grounded Check
             IsGrounded();
 
@@ -173,4 +174,8 @@ namespace WOB.Player.Movement
     public class BoolEvent : UnityEvent<bool> { }
 }
 /* The default locomotion for the player. By far the most complicated
- * of all the movement types, but it sees the most use. */
+ * of all the movement types, but it sees the most use.
+ * 
+ * THIS IS CRITICALLY IMPORTANT: MAKE ****SURE**** THAT THE GROUNDCHECK
+ * TRANSFORM IS IN THE RIGHT SPOT. I HAVE WASTED SO MUCH TIME IN THE PAST 
+ * DUE TO THIS ONE ERROR. */

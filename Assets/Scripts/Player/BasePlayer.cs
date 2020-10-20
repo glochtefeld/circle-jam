@@ -14,9 +14,6 @@ namespace WOB.Player
         public PlayerInput input;
         #endregion
         
-        // DEBUG ONLY - DELETE
-        public TMPro.TMP_Text debugText;
-
         #region Monobehaviour
         // Start is called before the first frame update
         void Start()
@@ -28,8 +25,6 @@ namespace WOB.Player
         private void FixedUpdate()
         {
             movement.Move(input.ReadInput());
-            if (debugText != null)
-                debugText.text = GetComponent<Rigidbody2D>().velocity.ToString();
         }
         #endregion
 
@@ -37,6 +32,7 @@ namespace WOB.Player
         public void SwingOnHookshot() => movement = GetComponent<HookshotSwing>();
         public void StartWalking() => movement = GetComponent<Walking>();
         public void StartSwimming() => movement = GetComponent<Swimming>();
+        public void StartClimbing() => movement = GetComponent<Climbing>();
         #endregion
     }
 }

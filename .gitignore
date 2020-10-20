@@ -11,6 +11,9 @@
 /[Mm]emoryCaptures/
 /[Ii]deas/
 
+/[Aa]ssets/LeanTween/Documentation*
+/[Aa]ssets/LeanTween/Examples*
+
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 

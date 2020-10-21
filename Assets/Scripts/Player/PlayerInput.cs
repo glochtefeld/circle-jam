@@ -11,7 +11,7 @@ namespace WOB.Player
 
         void Update()
         {
-            mouseClicked = Input.GetMouseButtonDown(1);
+            mouseClicked = Input.GetKey(KeyCode.Mouse0);
             _input = new Vector2(
                 Input.GetAxisRaw("Horizontal"),
                 Input.GetAxisRaw("Vertical"));

@@ -61,14 +61,29 @@ namespace WOB.Player
         }
 
         #region Switch Movement Types
-        public void SwingOnHookshot() => 
+        public void SwingOnHookshot() 
+        {
             movement = mover.GetComponent<HookshotSwing>();
-        public void StartWalking() => 
+            GetComponent<Rigidbody2D>().gravityScale = 1f;
+        }
+        
+        public void StartWalking()
+        {
             movement = mover.GetComponent<Walking>();
-        public void StartSwimming() => 
+            GetComponent<Rigidbody2D>().gravityScale = 1f;
+        }
+        
+        public void StartSwimming() 
+        {
             movement = mover.GetComponent<Swimming>();
-        public void StartClimbing() => 
+            GetComponent<Rigidbody2D>().gravityScale = 0.3f;
+        }
+        
+        public void StartClimbing()
+        {
             movement = mover.GetComponent<Climbing>();
+            GetComponent<Rigidbody2D>().gravityScale = 0f;
+        } 
         #endregion
 
         private void ShootHook()

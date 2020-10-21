@@ -10,6 +10,7 @@ namespace WOB.Player.Movement
         public float speed;
         public float jumpVelocity;
         public bool airControl;
+        public SpriteRenderer player;
         [Range(0, 1)]
         public float crouchSpeedMultiplier;
         public new Rigidbody2D rigidbody;
@@ -145,10 +146,8 @@ namespace WOB.Player.Movement
         #endregion
         private void Flip()
         {
+            player.flipX = _facingRight;
             _facingRight = !_facingRight;
-            var scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
         }
 
         private void IsGrounded()

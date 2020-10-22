@@ -327,7 +327,7 @@ MonoBehaviour:
   maxGroundedMemory: 0.2
   ground:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 8448
   groundCheck: {fileID: 2525578842643905389}
   ceilingCheck: {fileID: 2525578844586790793}
   onLandEvent:

@@ -6,6 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: dee2638f6b7ad0b46b74cb918bd16993
+  - enabled: 1
+    path: Assets/Scenes/Levels/Forest 1.unity
+    guid: c06579e75f8464b46934f32b2c533754
+  - enabled: 1
+    path: Assets/Scenes/Levels/ForestTransition.unity
+    guid: 5873619826906e2428c87206bf91b769
+  - enabled: 1
+    path: Assets/Scenes/Levels/Forest 2.unity
+    guid: 10d05ba92a985dc468523b4a26f8c0f8
+  - enabled: 1
+    path: Assets/Scenes/Levels/City 1.unity
+    guid: 005ca352a1c8b3d428e2630699407f7c
+  - enabled: 1
+    path: Assets/Scenes/Levels/CityTransition.unity
+    guid: fb6c9f0f6daba174cbb5655c54bfcd83
+  - enabled: 1
+    path: Assets/Scenes/Levels/City 2.unity
+    guid: 4ca4139a4b4513647818d4c1b658b97e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Sky 1.unity
+    guid: 82fcae28c0ef2194190b7f30f20e5b4d
+  - enabled: 1
+    path: Assets/Scenes/Player.unity
+    guid: 18c2c794dd100df4a899632463f4ebd8
   m_configObjects: {}

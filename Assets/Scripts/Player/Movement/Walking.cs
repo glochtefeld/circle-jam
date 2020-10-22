@@ -40,6 +40,9 @@ namespace WOB.Player.Movement
         public UnityEvent onLandEvent;
         public BoolEvent onCrouchEvent;
 
+        //FMOD
+        private FMODUnity.StudioEventEmitter EventEmitterRef;
+
         #endregion
 
         #region Monobehaviour
@@ -49,6 +52,9 @@ namespace WOB.Player.Movement
                 onLandEvent = new UnityEvent();
             if (onCrouchEvent == null)
                 onCrouchEvent = new BoolEvent();
+
+                //fmod
+                EventEmitterRef = GetComponent<FMODUnity.StudioEventEmitter>();
         }
         #endregion
 
@@ -108,7 +114,7 @@ namespace WOB.Player.Movement
                 //        onCrouchEvent.Invoke(false);
                 //    }
                 //}
-                
+
                 // move left / right
                 Vector3 targetVelocity = new Vector2(
                     move,
@@ -141,6 +147,9 @@ namespace WOB.Player.Movement
                 rigidbody.velocity = new Vector2(
                     rigidbody.velocity.x,
                     jumpVelocity);
+
+                    //fmod
+                    EventEmitterRef.Play();
             }
         }
         #endregion
@@ -174,7 +183,7 @@ namespace WOB.Player.Movement
 }
 /* The default locomotion for the player. By far the most complicated
  * of all the movement types, but it sees the most use.
- * 
+ *
  * THIS IS CRITICALLY IMPORTANT: MAKE ****SURE**** THAT THE GROUNDCHECK
- * TRANSFORM IS IN THE RIGHT SPOT. I HAVE WASTED SO MUCH TIME IN THE PAST 
+ * TRANSFORM IS IN THE RIGHT SPOT. I HAVE WASTED SO MUCH TIME IN THE PAST
  * DUE TO THIS ONE ERROR. */

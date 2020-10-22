@@ -10,6 +10,7 @@ namespace WOB.Player.Movement
         public float speed;
         public float jumpVelocity;
         public bool airControl;
+        public SpriteRenderer player;
         [Range(0, 1)]
         public float crouchSpeedMultiplier;
         public new Rigidbody2D rigidbody;
@@ -32,8 +33,8 @@ namespace WOB.Player.Movement
         public Transform groundCheck;
         [Tooltip("Transform at the top of the player")]
         public Transform ceilingCheck;
-        [Tooltip("Collider to disable when crouching")]
-        public Collider2D crouchDisableCollider;
+        //[Tooltip("Collider to disable when crouching")]
+        //public Collider2D crouchDisableCollider;
         [Space]
         [Header("Events")]
         public UnityEvent onLandEvent;
@@ -56,16 +57,17 @@ namespace WOB.Player.Movement
         private bool _jumping;
         private bool _isGrounded;
         private bool _isCrouching;
-        private const float GROUND_CHECK_RADIUS = 0.2f;
+        private const float GROUND_CHECK_RADIUS = 0.01f;
         private const float CEIL_CHECK_RADIUS = 0.2f;
         private float _jumpPressedTime = 0f;
         private float _groundedMemoryTime = 0f;
+        private const int PIXEL_SIZE = 50;
 
         #region IPlayerMovement
         public void Move(Vector2 direction)
         {
-            var crouch = direction.y < 0;
-            var move = direction.x * speed * Time.fixedDeltaTime;
+            //var crouch = direction.y < 0;
+            var move = direction.x * PIXEL_SIZE * speed * Time.fixedDeltaTime;
             // Initial Grounded Check
             IsGrounded();
 
@@ -77,35 +79,35 @@ namespace WOB.Player.Movement
                 ceilingCheck.position,
                 CEIL_CHECK_RADIUS,
                 ground);
-            if (!crouch && ceilingCollider != null)
-                crouch = true;
+            //if (!crouch && ceilingCollider != null)
+            //    crouch = true;
 
             // Reduce speed when crouching and move L/R
             if (_isGrounded || airControl)
             {
-                if (crouch)
-                {
-                    if (!_isCrouching)
-                    {
-                        _isCrouching = true;
-                        onCrouchEvent.Invoke(true);
-                    }
+                //if (crouch)
+                //{
+                //    if (!_isCrouching)
+                //    {
+                //        _isCrouching = true;
+                //        onCrouchEvent.Invoke(true);
+                //    }
 
-                    move *= crouchSpeedMultiplier;
+                //    move *= crouchSpeedMultiplier;
 
-                    if (crouchDisableCollider != null)
-                        crouchDisableCollider.enabled = false;
-                }
-                else
-                {
-                    if (crouchDisableCollider != null)
-                        crouchDisableCollider.enabled = true;
-                    if (_isCrouching)
-                    {
-                        _isCrouching = false;
-                        onCrouchEvent.Invoke(false);
-                    }
-                }
+                //    if (crouchDisableCollider != null)
+                //        crouchDisableCollider.enabled = false;
+                //}
+                //else
+                //{
+                //    if (crouchDisableCollider != null)
+                //        crouchDisableCollider.enabled = true;
+                //    if (_isCrouching)
+                //    {
+                //        _isCrouching = false;
+                //        onCrouchEvent.Invoke(false);
+                //    }
+                //}
                 
                 // move left / right
                 Vector3 targetVelocity = new Vector2(
@@ -144,10 +146,8 @@ namespace WOB.Player.Movement
         #endregion
         private void Flip()
         {
+            player.flipX = _facingRight;
             _facingRight = !_facingRight;
-            var scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
         }
 
         private void IsGrounded()
@@ -173,4 +173,8 @@ namespace WOB.Player.Movement
     public class BoolEvent : UnityEvent<bool> { }
 }
 /* The default locomotion for the player. By far the most complicated
- * of all the movement types, but it sees the most use. */
+ * of all the movement types, but it sees the most use.
+ * 
+ * THIS IS CRITICALLY IMPORTANT: MAKE ****SURE**** THAT THE GROUNDCHECK
+ * TRANSFORM IS IN THE RIGHT SPOT. I HAVE WASTED SO MUCH TIME IN THE PAST 
+ * DUE TO THIS ONE ERROR. */

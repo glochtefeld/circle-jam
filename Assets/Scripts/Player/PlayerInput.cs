@@ -1,29 +1,21 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace WOB.Player
 {
     public class PlayerInput : MonoBehaviour
     {
-        public BasePlayer player;
-
         private Vector2 _input;
-        // Start is called before the first frame update
-        void Start()
-        {
+        private bool mouseClicked;
+        public Vector2 ReadInput() => _input;
+        public bool Mouse() => mouseClicked;
 
-        }
-
-        // Update is called once per frame
         void Update()
         {
-            _input = new Vector2(Input.GetAxisRaw("Horizontal"),
+            mouseClicked = Input.GetKey(KeyCode.Mouse0);
+            _input = new Vector2(
+                Input.GetAxisRaw("Horizontal"),
                 Input.GetAxisRaw("Vertical"));
         }
-
-        public Vector2 ReadInput() => _input;
-
     }
 }
+/* Reads keyboard input and stores it to be read later. */

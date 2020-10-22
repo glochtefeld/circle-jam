@@ -1,4 +1,4 @@
-﻿#define DEBUG_MODE
+﻿// #define DEBUG_MODE
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +34,7 @@ namespace WOB.Player
         private IPlayerMovement movement;
         private bool _hookWasShot;
         private bool _hooked;
-        public static int LastActiveScene = 1;
+        public int Score { set; get; }
 
         private float ratio;
         #region Monobehaviour
@@ -69,6 +69,7 @@ namespace WOB.Player
 
         public void Kill()
         {
+            deathPanel.gameObject.SetActive(true);
             Debug.Log($"Killed Player");
             // Activate Death screen
             StartCoroutine(Death());
@@ -81,6 +82,8 @@ namespace WOB.Player
             StartCoroutine(UnloadScenes(loadedScenes,startPos));
 
         }
+
+        public void AddPoints() => Score++;
 
         #region Switch Movement Types
         public void SwingOnHookshot() 
@@ -98,7 +101,7 @@ namespace WOB.Player
         public void StartSwimming() 
         {
             movement = mover.GetComponent<Swimming>();
-            GetComponent<Rigidbody2D>().gravityScale = 0.3f;
+            GetComponent<Rigidbody2D>().gravityScale = 0.1f;
         }
         
         public void StartClimbing()

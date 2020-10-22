@@ -26,9 +26,9 @@ namespace WOB.UI
             // Buttons
             _start.onClick.AddListener(() =>
             {
-                SceneManager.LoadScene(1);
-                SceneManager.LoadScene("Player", LoadSceneMode.Additive);
+                SceneManager.LoadScene("Player");
                 SceneManager.LoadScene(2, LoadSceneMode.Additive);
+                SceneManager.LoadScene(1, LoadSceneMode.Additive);
             });
             _toOptions.onClick.AddListener(() =>
             {

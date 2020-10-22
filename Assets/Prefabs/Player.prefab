@@ -280,8 +280,8 @@ GameObject:
   - component: {fileID: 2525578842563056647}
   - component: {fileID: 2525578842563056644}
   - component: {fileID: 2525578842563056645}
-  - component: {fileID: 2525578842563056642}
   - component: {fileID: 2525578842563056643}
+  - component: {fileID: 576872842}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -345,18 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d45a080f7395964d879d8001cba1160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2525578842563056642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2525578842563056640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d5d2bdf90dee34cbbe6180be0b7002, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2525578842563056643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +362,22 @@ MonoBehaviour:
   swingSpeed: 8
   movementSmoothing: 0.3
   rigidbody: {fileID: 2525578844489591346}
+--- !u!114 &576872842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525578842563056640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c026921dfee4f4c95f1db58530e363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 2525578844489591346}
+  movementSmoothing: 0.15
+  horzSpeed: 3.5
+  vertSpeed: 2
 --- !u!1 &2525578842643905386
 GameObject:
   m_ObjectHideFlags: 0

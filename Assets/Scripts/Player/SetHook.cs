@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using WOB.Enemy.Type;
 
 public class SetHook : MonoBehaviour
 {
@@ -6,14 +7,19 @@ public class SetHook : MonoBehaviour
     public LineRenderer line;
 
     private bool _swinging;
-    private Rigidbody2D _target;
+    private Vector3 _potentialPosition;
+    private HookTarget _potentialHTarget;
     public void Update()
     {
+        if (_potentialHTarget != null)
+        {
+            _potentialPosition = _potentialHTarget.hookPoint.position;
+        }
         if (_swinging)
             line.SetPositions(new Vector3[]
             {
                 transform.position,
-                _target.position
+                _potentialPosition
             });
     }
 
@@ -24,7 +30,18 @@ public class SetHook : MonoBehaviour
         hookLine.connectedBody = target;
         hookLine.distance = distance;
         _swinging = true;
-        _target = target;
+
+        _potentialHTarget = target.GetComponent<HookTarget>();
+        if (_potentialHTarget != null)
+        {
+            _potentialHTarget.Moving = true;
+            hookLine.connectedAnchor = _potentialHTarget.hookPoint.localPosition;
+        }
+        else
+        {
+            hookLine.connectedAnchor = Vector2.zero;
+            _potentialPosition = target.position;
+        }
     }
 
     public void UnHook()

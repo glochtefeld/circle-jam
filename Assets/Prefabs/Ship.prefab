@@ -4933,6 +4933,8 @@ MonoBehaviour:
   idle: {fileID: 5236367048804494791}
   takeOff: {fileID: 9180183161079625779}
   animator: {fileID: 1645670295839998774}
+  nextScene: 
+  nextSceneTransition: 
 --- !u!61 &1454770487316586890
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4943,7 +4945,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.6173248}

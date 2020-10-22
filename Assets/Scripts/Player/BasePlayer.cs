@@ -34,6 +34,7 @@ namespace WOB.Player
         private IPlayerMovement movement;
         private bool _hookWasShot;
         private bool _hooked;
+        private bool _dead;
         public int Score { set; get; }
 
         private float ratio;
@@ -69,6 +70,7 @@ namespace WOB.Player
 
         public void Kill()
         {
+            _dead = true;
             deathPanel.gameObject.SetActive(true);
             Debug.Log($"Killed Player");
             // Activate Death screen
@@ -136,8 +138,14 @@ namespace WOB.Player
             line.enabled = true;
             while ((time < maxHookTime) && !hooked && input.Mouse())
             {
+                if (_dead)
+                    break;
                 time += Time.deltaTime;
-                hooked = hook.GetComponent<CheckHookable>().Hooked;
+                try
+                {
+                    hooked = hook.GetComponent<CheckHookable>().Hooked;
+                }
+                catch { }
 
                 line.SetPositions(new Vector3[]
                 {
@@ -225,6 +233,7 @@ namespace WOB.Player
             }
             deathPanel.alpha = 0;
             transform.position = startPos;
+            _dead = false;
         }
 
 #if DEBUG_MODE

@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using WOB.Player;
 
 public class TakeoffRoutine : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class TakeoffRoutine : MonoBehaviour
     [Header("FadeToBlack")]
     public string nextScene;
     public string nextSceneTransition;
+    public bool loadPlayer;
     
 #pragma warning restore CS0649
     #endregion
@@ -34,7 +36,8 @@ public class TakeoffRoutine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (_started || collision.gameObject.tag != "Player")
+        if (collision.gameObject.GetComponent<BasePlayer>()
+            == null)
             return;
         StartCoroutine(FlyAwayAndEndLevel());
     }
@@ -65,14 +68,14 @@ public class TakeoffRoutine : MonoBehaviour
         Camera.main.GetComponent<SmoothCameraMovement>()
             .Player = gameObject;
         time = 0;
-        var rate = 0.05f;
+        var rate = 0.001f;
         cg.gameObject.SetActive(true);
-        while (time > 3f)
+        while (time < 3f)
         {
             time += Time.deltaTime;
             transform.position = new Vector3(
                 transform.position.x,
-                transform.position.y + 0.001f,
+                transform.position.y + 0.02f,
                 transform.position.z);
 
             cg.alpha += rate;
@@ -81,9 +84,15 @@ public class TakeoffRoutine : MonoBehaviour
 
         while (!Input.GetKeyDown(KeyCode.Space))
             yield return null;
-        SceneManager.LoadScene(nextScene);
-        SceneManager.LoadScene(nextSceneTransition, LoadSceneMode.Additive);
-        SceneManager.LoadScene("Player", LoadSceneMode.Additive);
+        if (loadPlayer)
+        {
+            SceneManager.LoadScene("Player");
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
+            if (nextSceneTransition != "")
+                SceneManager.LoadScene(nextSceneTransition, LoadSceneMode.Additive);
+        }
+        else
+            SceneManager.LoadScene(nextScene);
     }
 #if DIAGNOSTIC_MODE
     private void OnGUI()

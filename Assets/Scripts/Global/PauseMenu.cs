@@ -20,7 +20,11 @@ public class PauseMenu : MonoBehaviour
     #region Monobehaviour
     private void Start()
     {
-        resume.onClick.AddListener(() => Resume());
+        resume.onClick.AddListener(() =>
+        {
+            Resume();
+            optionsPanel.SetActive(false);
+        });
         quitToMenu.onClick.AddListener(() =>
         SceneManager.LoadScene(0));
         options.onClick.AddListener(() =>

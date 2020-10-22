@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 396601763958225135}
   - component: {fileID: 6414801835904521675}
   - component: {fileID: 5767384685480940990}
-  m_Layer: 0
-  m_Name: StaticGroundHitbox
+  m_Layer: 13
+  m_Name: HittableWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

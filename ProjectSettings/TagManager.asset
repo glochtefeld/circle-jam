@@ -14,11 +14,11 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemies
+  - HookTarget
+  - Hook
+  - KnockoutWall
   - 
   - 
   - 

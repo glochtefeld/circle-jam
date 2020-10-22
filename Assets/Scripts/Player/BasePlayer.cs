@@ -57,18 +57,34 @@ namespace WOB.Player
 
         public void Kill()
         {
+            Debug.Log($"Killed Player");
             // TODO: Implement scene reloading & checkpoints
         }
 
         #region Switch Movement Types
-        public void SwingOnHookshot() => 
+        public void SwingOnHookshot() 
+        {
             movement = mover.GetComponent<HookshotSwing>();
-        public void StartWalking() => 
+            GetComponent<Rigidbody2D>().gravityScale = 1f;
+        }
+        
+        public void StartWalking()
+        {
             movement = mover.GetComponent<Walking>();
-        public void StartSwimming() => 
+            GetComponent<Rigidbody2D>().gravityScale = 1f;
+        }
+        
+        public void StartSwimming() 
+        {
             movement = mover.GetComponent<Swimming>();
-        public void StartClimbing() => 
+            GetComponent<Rigidbody2D>().gravityScale = 0.3f;
+        }
+        
+        public void StartClimbing()
+        {
             movement = mover.GetComponent<Climbing>();
+            GetComponent<Rigidbody2D>().gravityScale = 0f;
+        } 
         #endregion
 
         private void ShootHook()
@@ -152,14 +168,15 @@ namespace WOB.Player
             DestroyImmediate(hook);
         }
 
-        // Debugging
-        //private void OnGUI()
-        //{
-        //    GUI.Label(new Rect(0, 0, 100, 50), $"_hooked:{_hooked}");
-        //    GUI.Label(new Rect(0, 50, 100, 50), $"_hookWasShot:{_hookWasShot}");
-        //    GUI.Label(new Rect(0, 100, 100, 50), $"Mouse:{input.Mouse()}");
-        //    GUI.Label(new Rect(0, 150, 100, 50), $"Ratio:{ratio}");
-        //}
+#if DEBUG_MODE
+        private void OnGUI()
+        {
+            GUI.Label(new Rect(0, 0, 100, 50), $"_hooked:{_hooked}");
+            GUI.Label(new Rect(0, 50, 100, 50), $"_hookWasShot:{_hookWasShot}");
+            GUI.Label(new Rect(0, 100, 100, 50), $"Mouse:{input.Mouse()}");
+            GUI.Label(new Rect(0, 150, 100, 50), $"Ratio:{ratio}");
+        }
+#endif
     }
 }
 /* The main script that attaches to the player object. 

@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using WOB.Enemy.Type;
-
 namespace WOB.Enemy
 {
     [RequireComponent(typeof(IEnemy))]

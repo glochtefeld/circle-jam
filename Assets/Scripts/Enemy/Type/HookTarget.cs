@@ -1,4 +1,4 @@
-﻿#define DIAGNOSTIC
+﻿// #define DIAGNOSTIC
 using System;
 using System.Collections;
 using UnityEngine;

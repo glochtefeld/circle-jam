@@ -17,6 +17,11 @@ namespace WOB.UI
         [Header("Back to Main buttons")]
         public Button _fromOptionsToStart;
         public Button _fromCreditsToStart;
+        [Header("Audio")]
+        public AudioSource sfx;
+        public AudioClip cancel;
+        public AudioClip confirm;
+        public AudioClip navigate;
 #pragma warning restore CS0649
         #endregion
 
@@ -26,18 +31,21 @@ namespace WOB.UI
             // Buttons
             _start.onClick.AddListener(() =>
             {
+                sfx.PlayOneShot(confirm);
                 SceneManager.LoadScene("Player");
                 SceneManager.LoadScene(1, LoadSceneMode.Additive);
                 SceneManager.LoadScene(2, LoadSceneMode.Additive);
             });
             _toOptions.onClick.AddListener(() =>
             {
+                sfx.PlayOneShot(confirm);
                 _toOptions.interactable = false;
                 _switcher.TweenCanvasSwitch(_switcher[1]);
                 _toCredits.interactable = true;
             });
             _toCredits.onClick.AddListener(() =>
             {
+                sfx.PlayOneShot(confirm);
                 _toCredits.interactable = false;
                 _switcher.TweenCanvasSwitch(_switcher[2]);
                 _toOptions.interactable = true;

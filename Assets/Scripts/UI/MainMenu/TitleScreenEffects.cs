@@ -24,12 +24,16 @@ public class TitleScreenEffects : MonoBehaviour
     public float fadeInSpeed;
     [Header("Constant Canvases")]
     public Canvas mainCanvas;
+    [Header("Audio")]
+    public AudioSource sfx;
+    public AudioClip confirm;
     #endregion
 
     private IEnumerator _pulse;
     private IEnumerator _bobbing;
     private CanvasSwitcher _canvasSwitcher;
     private bool _leftTitle = false;
+    
     #region Monobehaviour
     private void Start()
     {
@@ -52,6 +56,7 @@ public class TitleScreenEffects : MonoBehaviour
 
     private void SwitchToMainMenu()
     {
+        sfx.PlayOneShot(confirm);
         _leftTitle = true;
         StopCoroutine(_pulse);
         StopCoroutine(_bobbing);

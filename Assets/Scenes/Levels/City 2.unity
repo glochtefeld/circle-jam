@@ -351,6 +351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5767384685480940990, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_Color.r
       value: 0.3160377
@@ -373,6 +377,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -547,6 +555,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a8f9adee226474d87b555d196085ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!253 &80546761
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80546759}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.46
+  m_Density: 40
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1001 &92736836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -740,6 +767,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a8f9adee226474d87b555d196085ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!253 &159979929
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159979927}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.46
+  m_Density: 40
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!4 &177231525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1267803622022928423, guid: 07544b19ae169cb4293072bd786b67bd, type: 3}
@@ -1042,6 +1088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5767384685480940990, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_Color.r
       value: 0.3160377
@@ -1068,6 +1118,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1494,6 +1548,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a8f9adee226474d87b555d196085ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!253 &385830286
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385830284}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.46
+  m_Density: 40
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!4 &400507412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9217508335101812366, guid: b48bd50cffa62ff43ac01f7bd0de3295, type: 3}
@@ -8399,6 +8472,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a8f9adee226474d87b555d196085ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!253 &945364061
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945364059}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.46
+  m_Density: 40
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1001 &955390102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8654,6 +8746,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a8f9adee226474d87b555d196085ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!253 &1038311283
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038311281}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.46
+  m_Density: 40
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1001 &1063850547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9070,6 +9181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5767384685480940990, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_Color.r
       value: 0.3160377
@@ -9093,6 +9208,26 @@ PrefabInstance:
     - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5695759
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8092021
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
@@ -10330,6 +10465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5767384685480940990, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_Color.r
       value: 0.3160377
@@ -10353,6 +10492,18 @@ PrefabInstance:
     - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.010799095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9784018
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
@@ -11680,6 +11831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5767384685480940990, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_Color.r
       value: 0.3160377
@@ -11703,6 +11858,18 @@ PrefabInstance:
     - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.016262084
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.96747583
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
@@ -12175,6 +12342,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a8f9adee226474d87b555d196085ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!253 &1886992474
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886992472}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.46
+  m_Density: 40
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1001 &1929732429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12238,6 +12424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5767384685480940990, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_Color.r
       value: 0.3160377
@@ -12261,6 +12451,18 @@ PrefabInstance:
     - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.016544774
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9669105
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
@@ -12418,6 +12620,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a8f9adee226474d87b555d196085ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!253 &1952442724
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952442722}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.46
+  m_Density: 40
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!4 &1975617796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1767334350424750465, guid: 9fd59ab733da64c49bbd4412476f787d, type: 3}
@@ -12809,6 +13030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5767384685480940990, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_Color.r
       value: 0.3160377
@@ -12832,6 +13057,26 @@ PrefabInstance:
     - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.10624638
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2887953
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.10570821
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.35396796
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}

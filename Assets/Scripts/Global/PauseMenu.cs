@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
             optionsPanel.SetActive(false);
         });
         quitToMenu.onClick.AddListener(() =>
-        SceneManager.LoadScene(0));
+        Application.Quit());
         options.onClick.AddListener(() =>
         optionsPanel.SetActive(!optionsPanel.activeSelf));
     }

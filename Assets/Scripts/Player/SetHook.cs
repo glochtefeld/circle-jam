@@ -32,7 +32,7 @@ public class SetHook : MonoBehaviour
         _swinging = true;
 
         _potentialHTarget = target.GetComponent<HookTarget>();
-        if (_potentialHTarget != null)
+        if (_potentialHTarget != null && _potentialHTarget.enabled)
         {
             _potentialHTarget.Moving = true;
             hookLine.connectedAnchor = _potentialHTarget.hookPoint.localPosition;

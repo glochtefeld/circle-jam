@@ -81,6 +81,7 @@ public class TakeoffRoutine : MonoBehaviour
             cg.alpha += rate;
             yield return null;
         }
+        cg.alpha = 1f;
 
         while (!Input.GetKeyDown(KeyCode.Space))
             yield return null;

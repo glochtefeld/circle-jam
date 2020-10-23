@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hookPoint: {fileID: 2495624865074030375}
   rigidbody: {fileID: 3423407914141017076}
-  riseDistance: 5
+  relativeTargetPosition: {x: 0, y: 5, z: 0}
   riseLerpTime: 60
   fallLerpTime: 720
 --- !u!114 &1582881816977643829

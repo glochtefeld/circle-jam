@@ -119,7 +119,7 @@ public class TitleScreenEffects : MonoBehaviour
     {
         float currentTime = 0f;
         var currentPos = mainCam.transform.position;
-        var targetPos = new Vector3(distance, 0);
+        var targetPos = new Vector3(distance, 0, mainCam.transform.position.z);
         while (currentTime < cameraLerpTime - 0.1f)
         {
             currentTime += Time.deltaTime;

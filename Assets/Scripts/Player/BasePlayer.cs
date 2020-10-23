@@ -70,6 +70,9 @@ namespace WOB.Player
 
         public void Kill()
         {
+            var ps = GameObject.Find("/DeathLaser");
+            if (ps != null)
+                ps.GetComponent<ParticleSystem>().Stop();
             _dead = true;
             deathPanel.gameObject.SetActive(true);
             Debug.Log($"Killed Player");

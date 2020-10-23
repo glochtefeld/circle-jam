@@ -13,7 +13,7 @@
 
 /[Aa]ssets/LeanTween/Documentation*
 /[Aa]ssets/LeanTween/Examples*
-
+/[Aa]ssets/UnityBuild*
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 

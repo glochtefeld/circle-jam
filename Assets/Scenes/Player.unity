@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2525578842563056644, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}
-      propertyPath: jumpVelocity
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2525578844489591345, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}
       propertyPath: deathPanel
       value: 

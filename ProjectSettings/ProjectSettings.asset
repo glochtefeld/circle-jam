@@ -550,7 +550,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: BUILD_TYPE_RELEASEBUILD;BUILD_PLATFORM_LINUX;BUILD_ARCH_LINUXX64
+    1: 
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

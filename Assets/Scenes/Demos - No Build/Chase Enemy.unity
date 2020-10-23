@@ -123,6 +123,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &424779666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2525578842563056640, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}
+  m_PrefabInstance: {fileID: 1815377648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &424779672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424779666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Jump
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &608336522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,6 +223,8 @@ GameObject:
   - component: {fileID: 1265136761}
   - component: {fileID: 1265136760}
   - component: {fileID: 1265136759}
+  - component: {fileID: 1265136762}
+  - component: {fileID: 1265136763}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -209,7 +239,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265136758}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1265136760
 Camera:
   m_ObjectHideFlags: 0
@@ -267,6 +297,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1265136762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265136758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4417faacebce0de4fbde25ec23055cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetRuntimeManager: {fileID: 0}
+--- !u!114 &1265136763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265136758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1001 &1376100673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392,6 +448,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2525578842563056644, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}
+      propertyPath: onLandEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2525578842563056644, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}
+      propertyPath: onLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2525578842563056644, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}
+      propertyPath: onLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2525578844489591348, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.506667
@@ -440,5 +508,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1990765238919713045, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bca1c66dcabc51e4d9fbdc726169df89, type: 3}

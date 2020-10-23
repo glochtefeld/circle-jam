@@ -150,6 +150,7 @@ namespace WOB.Player.Movement
 
                     //fmod
                     EventEmitterRef.Play();
+
             }
         }
         #endregion

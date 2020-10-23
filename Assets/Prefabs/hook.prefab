@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6221855258737255821}
   - component: {fileID: -6828659687374826002}
   - component: {fileID: 7774718773056180416}
+  - component: {fileID: 6944135642697634971}
   m_Layer: 12
   m_Name: hook
   m_TagString: Untagged
@@ -153,3 +154,26 @@ PolygonCollider2D:
       - {x: 0.19, y: -0.01}
       - {x: 0.19, y: 0.03}
       - {x: -0.03, y: 0.25}
+--- !u!114 &6944135642697634971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800890267744643274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Hookshot fire
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

@@ -20,12 +20,14 @@ public class TakeoffRoutine : MonoBehaviour
     #endregion
 
     private CanvasGroup cg;
+    private AudioControl audioControl;
     private bool _started;
 #region Monobehaviour
     void Start()
     {
         cg = GameObject.Find("/Canvas").transform.GetChild(0)
             .GetComponent<CanvasGroup>();
+        audioControl = GameObject.Find("/Player").transform.GetComponentInChildren<AudioControl>();
     }
 
     void Update()
@@ -45,6 +47,7 @@ public class TakeoffRoutine : MonoBehaviour
 
     private IEnumerator FlyAwayAndEndLevel()
     {
+        Destroy(MusicAssigner.Instance);
         Debug.Log($"Starting ");
         animator.Play("Takeoff");
         idle.Pause();

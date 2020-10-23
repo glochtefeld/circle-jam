@@ -13283,6 +13283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 390119072015636287, guid: 70f4abe2fa373f640abca1461af04f61, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70f4abe2fa373f640abca1461af04f61, type: 3}
 --- !u!4 &396601763424896424

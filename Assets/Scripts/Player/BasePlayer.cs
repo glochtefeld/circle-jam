@@ -29,6 +29,8 @@ namespace WOB.Player
         [Header("Death")]
         public CanvasGroup deathPanel;
         public float fadeRate;
+        [Header("Audio")]
+        public AudioControl audioControl;
         #endregion
         
         private IPlayerMovement movement;
@@ -70,6 +72,7 @@ namespace WOB.Player
 
         public void Kill()
         {
+            audioControl.PlaySFX(SFX.Death);
             var ps = GameObject.Find("/DeathLaser");
             if (ps != null)
                 ps.GetComponent<ParticleSystem>().Stop();
@@ -105,6 +108,7 @@ namespace WOB.Player
         
         public void StartSwimming() 
         {
+            audioControl.PlaySFX(SFX.Splash);
             movement = mover.GetComponent<Swimming>();
             GetComponent<Rigidbody2D>().gravityScale = 0.1f;
         }
@@ -123,6 +127,7 @@ namespace WOB.Player
 
         private IEnumerator Hook()
         {
+            audioControl.PlaySFX(SFX.HookFire);
             // Prevent hookshot from being fired
             _hookWasShot = true;
             // Instantiate hook
@@ -160,6 +165,7 @@ namespace WOB.Player
 
             if (hooked)
             {
+                audioControl.PlaySFX(SFX.HookCollideSucceed);
                 _hooked = true;
                 var target = hook.GetComponent<CheckHookable>()
                     .@object;
@@ -172,6 +178,7 @@ namespace WOB.Player
             }
             else
             {
+                audioControl.PlaySFX(SFX.HookCollideFail);
                 hook.GetComponent<Rigidbody2D>().velocity = 
                     Vector2.zero;
                 time = 0;

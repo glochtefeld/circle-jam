@@ -13,6 +13,9 @@ public class PauseMenu : MonoBehaviour
     public Button quitToMenu;
     public Button options;
     public GameObject optionsPanel;
+    [Header("Audio")]
+    public new AudioSource audio;
+    public AudioClip pauseSound;
 #pragma warning restore CS0649
     #endregion
 
@@ -34,6 +37,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            audio.PlayOneShot(pauseSound);
             if (PauseGame)
             {
                 Resume();

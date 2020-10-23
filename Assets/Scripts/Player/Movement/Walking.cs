@@ -33,12 +33,13 @@ namespace WOB.Player.Movement
         public Transform groundCheck;
         [Tooltip("Transform at the top of the player")]
         public Transform ceilingCheck;
-        //[Tooltip("Collider to disable when crouching")]
-        //public Collider2D crouchDisableCollider;
+        [Header("Audio")]
+        public AudioControl audioControl;
         [Space]
         [Header("Events")]
         public UnityEvent onLandEvent;
         public BoolEvent onCrouchEvent;
+        public UnityEvent onJumpEvent;
 
         #endregion
 
@@ -49,6 +50,11 @@ namespace WOB.Player.Movement
                 onLandEvent = new UnityEvent();
             if (onCrouchEvent == null)
                 onCrouchEvent = new BoolEvent();
+            if (onLandEvent == null)
+                onLandEvent = new UnityEvent();
+
+            onLandEvent.AddListener(() => audioControl.PlaySFX(SFX.Land));
+            onJumpEvent.AddListener(() => audioControl.PlaySFX(SFX.Jump));
         }
         #endregion
 
@@ -74,41 +80,9 @@ namespace WOB.Player.Movement
             if (direction.y > 0)
                 _jumpPressedTime = maxJumpPressedMemory;
 
-            // Force crouch if under a ceiling
-            var ceilingCollider = Physics2D.OverlapCircle(
-                ceilingCheck.position,
-                CEIL_CHECK_RADIUS,
-                ground);
-            //if (!crouch && ceilingCollider != null)
-            //    crouch = true;
-
             // Reduce speed when crouching and move L/R
             if (_isGrounded || airControl)
-            {
-                //if (crouch)
-                //{
-                //    if (!_isCrouching)
-                //    {
-                //        _isCrouching = true;
-                //        onCrouchEvent.Invoke(true);
-                //    }
-
-                //    move *= crouchSpeedMultiplier;
-
-                //    if (crouchDisableCollider != null)
-                //        crouchDisableCollider.enabled = false;
-                //}
-                //else
-                //{
-                //    if (crouchDisableCollider != null)
-                //        crouchDisableCollider.enabled = true;
-                //    if (_isCrouching)
-                //    {
-                //        _isCrouching = false;
-                //        onCrouchEvent.Invoke(false);
-                //    }
-                //}
-                
+            {                
                 // move left / right
                 Vector3 targetVelocity = new Vector2(
                     move,
@@ -135,12 +109,14 @@ namespace WOB.Player.Movement
             // Jumping
             if (_groundedMemoryTime > 0
                 && _jumpPressedTime > 0
-                && rigidbody.velocity.y < 10f)
+                && rigidbody.velocity.y < 10f
+                && _isGrounded)
             {
                 _isGrounded = false;
                 rigidbody.velocity = new Vector2(
                     rigidbody.velocity.x,
                     jumpVelocity);
+                onJumpEvent.Invoke();
             }
         }
         #endregion

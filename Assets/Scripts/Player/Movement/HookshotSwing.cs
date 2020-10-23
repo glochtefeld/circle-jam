@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace WOB.Player.Movement
 {
@@ -14,10 +15,21 @@ namespace WOB.Player.Movement
         [Range(0, 1)]
         public float movementSmoothing;
         public new Rigidbody2D rigidbody;
+        [Header("Audio")]
+        public AudioControl audioControl;
+
+        public UnityEvent onSwingEvent;
         #endregion
+
+        private void Start()
+        {
+            if (onSwingEvent == null)
+                onSwingEvent = new UnityEvent();
+        }
 
         private const int PIXEL_SIZE = 50;
         private Vector3 _velocity;
+        private bool _playingSound;
         #region IPlayerMovement
         public void Move(Vector2 direction)
         {
@@ -36,10 +48,24 @@ namespace WOB.Player.Movement
                 targetVelocity,
                 ref _velocity,
                 movementSmoothing);
-
+            if (direction.x != 0 && !_playingSound)
+            {
+                StartCoroutine(PlaySwing());
+                _playingSound = true;
+            }
 
         }
         #endregion
 
+        private IEnumerator PlaySwing()
+        {
+            if (!_playingSound)
+            {
+                audioControl.PlaySFX(SFX.Swing);
+                yield return new WaitForSeconds(0.75f);
+                _playingSound = false;
+            }
+
+        }
     }
 }

@@ -367,6 +367,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
 --- !u!4 &49793130 stripped
@@ -374,6 +378,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 396601763958225135, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
   m_PrefabInstance: {fileID: 49793129}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &49793131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+  m_PrefabInstance: {fileID: 49793129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!253 &49793132
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49793131}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 1536
+  m_SurfaceLevel: 0.37
+  m_Density: 6
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1001 &64723104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -738,7 +766,7 @@ Transform:
   - {fileID: 2036172505}
   - {fileID: 177231525}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &211770012
 PrefabInstance:
@@ -1020,6 +1048,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
 --- !u!4 &251196318 stripped
@@ -1027,6 +1059,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 396601763958225135, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
   m_PrefabInstance: {fileID: 251196317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &251196319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+  m_PrefabInstance: {fileID: 251196317}
+  m_PrefabAsset: {fileID: 0}
+--- !u!253 &251196320
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251196319}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 1536
+  m_SurfaceLevel: 0.3
+  m_Density: 6
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1001 &288116338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1725,7 +1781,7 @@ Transform:
   - {fileID: 1596928715}
   - {fileID: 1201386066}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &544026457
 PrefabInstance:
@@ -6679,7 +6735,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &587169692
 MonoBehaviour:
@@ -9353,7 +9409,7 @@ Transform:
   - {fileID: 810819833}
   - {fileID: 6526994}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1254804814
 PrefabInstance:
@@ -9597,7 +9653,7 @@ Transform:
   - {fileID: 251196318}
   - {fileID: 1475333884}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1362657019
 PrefabInstance:
@@ -10093,6 +10149,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
 --- !u!4 &1475333884 stripped
@@ -10100,6 +10160,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 396601763958225135, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
   m_PrefabInstance: {fileID: 1475333883}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1475333885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+  m_PrefabInstance: {fileID: 1475333883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!253 &1475333886
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475333885}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 1536
+  m_SurfaceLevel: 0.4
+  m_Density: 6
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!4 &1478361759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9217508335101812366, guid: b48bd50cffa62ff43ac01f7bd0de3295, type: 3}
@@ -10824,7 +10908,7 @@ Transform:
   - {fileID: 2027261067}
   - {fileID: 1445160789}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1652229000
 PrefabInstance:
@@ -11334,6 +11418,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
 --- !u!4 &1738211994 stripped
@@ -11341,6 +11429,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 396601763958225135, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
   m_PrefabInstance: {fileID: 1738211993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1738211995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+  m_PrefabInstance: {fileID: 1738211993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!253 &1738211996
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738211995}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 1536
+  m_SurfaceLevel: 0.42
+  m_Density: 6
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1001 &1750136606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11843,6 +11955,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6414801835904521675, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
 --- !u!4 &1929732430 stripped
@@ -11850,6 +11966,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 396601763958225135, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
   m_PrefabInstance: {fileID: 1929732429}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1929732431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109443342567016324, guid: 9646cc14051ee294eada8fbbcc396da9, type: 3}
+  m_PrefabInstance: {fileID: 1929732429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!253 &1929732432
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929732431}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 1536
+  m_SurfaceLevel: 0.39
+  m_Density: 6
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
 --- !u!1001 &1931638381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12608,7 +12748,7 @@ Transform:
   m_LocalScale: {x: 2.7886047, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &555469063803002453
 PrefabInstance:

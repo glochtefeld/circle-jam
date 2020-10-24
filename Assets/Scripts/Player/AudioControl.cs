@@ -97,42 +97,54 @@ public class AudioControl : MonoBehaviour
             case BGM.Main:
                 if (main.intro != null)
                 {
-                    bgm.PlayOneShot(main.intro);
+                    bgm.loop = false;
+                    bgm.clip = main.intro;
+                    bgm.Play();
                     while (bgm.isPlaying)
                         yield return null;
                 }
-                bgm.PlayOneShot(main.mainLoop);
+                bgm.clip = main.mainLoop;
                 bgm.loop = true;
+                bgm.Play();
                 break;
             case BGM.Forest:
                 if (forest.intro != null)
                 {
-                    bgm.PlayOneShot(forest.intro);
+                    bgm.loop = false;
+                    bgm.clip = forest.intro;
+                    bgm.Play();
                     while (bgm.isPlaying)
                         yield return null;
                 }
-                bgm.PlayOneShot(forest.mainLoop);
+                bgm.clip = forest.mainLoop;
                 bgm.loop = true;
+                bgm.Play();
                 break;
             case BGM.City:
                 if (city.intro != null)
                 {
-                    bgm.PlayOneShot(city.intro);
+                    bgm.loop = false;
+                    bgm.clip = city.intro;
+                    bgm.Play();
                     while (bgm.isPlaying)
                         yield return null;
                 }
-                bgm.PlayOneShot(city.mainLoop);
+                bgm.clip = city.mainLoop;
                 bgm.loop = true;
+                bgm.Play();
                 break;
             case BGM.Sky:
                 if (sky.intro != null)
                 {
-                    bgm.PlayOneShot(sky.intro);
+                    bgm.loop = false;
+                    bgm.clip = city.intro;
+                    bgm.Play();
                     while (bgm.isPlaying)
                         yield return null;
                 }
-                bgm.PlayOneShot(sky.mainLoop);
+                bgm.clip = sky.mainLoop;
                 bgm.loop = true;
+                bgm.Play();
                 break;
         }
         yield return null;

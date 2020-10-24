@@ -516,6 +516,7 @@ MonoBehaviour:
   groundCheck: {fileID: 2525578842643905389}
   ceilingCheck: {fileID: 2525578844586790793}
   audioControl: {fileID: 921208453093261491}
+  anim: {fileID: 78722786}
   onLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -556,6 +557,9 @@ MonoBehaviour:
   movementSmoothing: 0.3
   rigidbody: {fileID: 2525578844489591346}
   audioControl: {fileID: 921208453093261491}
+  onSwingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &576872842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +621,7 @@ GameObject:
   - component: {fileID: 2525578844489591344}
   - component: {fileID: 2525578844489591345}
   - component: {fileID: 995897872}
+  - component: {fileID: 78722786}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -687,7 +692,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 200
-  m_Sprite: {fileID: 21300000, guid: b8a2900b98828074b91c28c374c2be4d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -695,7 +700,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &2525578844489591346
@@ -772,6 +777,7 @@ MonoBehaviour:
   deathPanel: {fileID: 0}
   fadeRate: 0.3
   audioControl: {fileID: 921208453093261491}
+  anim: {fileID: 78722786}
 --- !u!232 &995897872
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -791,6 +797,25 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 3.5523903
   m_MaxDistanceOnly: 1
+--- !u!95 &78722786
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525578844489591758}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe6111bd4907374418b9b102cc1439d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2525578844586790790
 GameObject:
   m_ObjectHideFlags: 0

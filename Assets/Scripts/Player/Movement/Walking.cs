@@ -35,6 +35,8 @@ namespace WOB.Player.Movement
         public Transform ceilingCheck;
         [Header("Audio")]
         public AudioControl audioControl;
+        [Header("Animation")]
+        public Animator anim;
         [Space]
         [Header("Events")]
         public UnityEvent onLandEvent;
@@ -53,8 +55,16 @@ namespace WOB.Player.Movement
             if (onLandEvent == null)
                 onLandEvent = new UnityEvent();
 
-            onLandEvent.AddListener(() => audioControl.PlaySFX(SFX.Land));
-            onJumpEvent.AddListener(() => audioControl.PlaySFX(SFX.Jump));
+            onLandEvent.AddListener(() =>
+            {
+                audioControl.PlaySFX(SFX.Land);
+                anim.SetBool("isJumping", false);
+            });
+            onJumpEvent.AddListener(() =>
+            {
+                audioControl.PlaySFX(SFX.Jump);
+                anim.SetBool("isJumping", true);
+            });
         }
         #endregion
 
@@ -76,7 +86,7 @@ namespace WOB.Player.Movement
             var move = direction.x * PIXEL_SIZE * speed * Time.fixedDeltaTime;
             // Initial Grounded Check
             IsGrounded();
-
+            anim.SetFloat("Speed", Mathf.Abs(direction.x));
             if (direction.y > 0)
                 _jumpPressedTime = maxJumpPressedMemory;
 

@@ -31,6 +31,8 @@ namespace WOB.Player
         public float fadeRate;
         [Header("Audio")]
         public AudioControl audioControl;
+        [Header("Animation")]
+        public Animator anim;
         #endregion
         
         private IPlayerMovement movement;
@@ -96,18 +98,24 @@ namespace WOB.Player
         #region Switch Movement Types
         public void SwingOnHookshot() 
         {
+            anim.SetBool("isSwimming", false);
+            anim.SetBool("isSwinging", true);
             movement = mover.GetComponent<HookshotSwing>();
             GetComponent<Rigidbody2D>().gravityScale = 1f;
         }
         
         public void StartWalking()
         {
+            anim.SetBool("isSwimming", false);
+            anim.SetBool("isSwinging", false);
             movement = mover.GetComponent<Walking>();
             GetComponent<Rigidbody2D>().gravityScale = 1f;
         }
         
         public void StartSwimming() 
         {
+            anim.SetBool("isSwinging", false);
+            anim.SetBool("isSwimming", true);
             audioControl.PlaySFX(SFX.Splash);
             movement = mover.GetComponent<Swimming>();
             GetComponent<Rigidbody2D>().gravityScale = 0.1f;
@@ -115,6 +123,8 @@ namespace WOB.Player
         
         public void StartClimbing()
         {
+            anim.SetBool("isSwimming", false);
+            anim.SetBool("isSwinging", false);
             movement = mover.GetComponent<Climbing>();
             GetComponent<Rigidbody2D>().gravityScale = 0f;
         } 

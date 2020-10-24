@@ -30,9 +30,18 @@ SpriteAtlas:
       enableTightPacking: 1
     variantMultiplier: 1
     packables:
-    - {fileID: 102900000, guid: 8d16c601189a29545aef989f40364d4b, type: 3}
     - {fileID: 102900000, guid: 9b1a5dcbb2531d94da4b56c242ed2e26, type: 3}
-    totalSpriteSurfaceArea: 7669349
+    - {fileID: 102900000, guid: 7e7c4a78d2b89364988bedf36d9745e0, type: 3}
+    - {fileID: 102900000, guid: f194f97c664369e4cbcdd4a79477a281, type: 3}
+    - {fileID: 102900000, guid: 67fd691a6c2cb934e900245f9888bd64, type: 3}
+    - {fileID: 102900000, guid: 031211e5426c7c942b38c776996030d8, type: 3}
+    - {fileID: 102900000, guid: 17a11cea2fc3abc4da0efa1df0b8469e, type: 3}
+    - {fileID: 102900000, guid: bc6a2bda16c2f18498509807583718f2, type: 3}
+    - {fileID: 102900000, guid: aad3cf23acd6eb843a75c992880f7ff1, type: 3}
+    - {fileID: 102900000, guid: 62a51c69912ab1e4eb16488d5f8e9207, type: 3}
+    - {fileID: 2800000, guid: a3e485b771bdb6e49884700990d5d4ba, type: 3}
+    - {fileID: 2800000, guid: f1d027d10e92eb644aa8230342a98734, type: 3}
+    totalSpriteSurfaceArea: 747536
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -47,14 +56,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 53d00cc02dbc99c4cb6bbfbd694dceb2, type: 3}
   - {fileID: 21300000, guid: c03a9cc0d6dcac14b80013196eea44b9, type: 3}
   - {fileID: 21300000, guid: bd9e11d089f137d4b986b753eaa9dbf6, type: 3}
-  - {fileID: 21300000, guid: f851c1013903fa1459748c70c681e6ec, type: 3}
   - {fileID: 21300000, guid: 991ef621b3b4b4f44914bb1b3f5a1987, type: 3}
   - {fileID: 21300000, guid: ec66973188995734ba8162d2a13a3fa0, type: 3}
   - {fileID: 21300000, guid: 53ef764181763074498a021e172d3a2f, type: 3}
   - {fileID: 21300000, guid: 3873d351865e59e40a02ee342c77018a, type: 3}
   - {fileID: 21300000, guid: 73bcbb61c12e57546a51e0b2818aaea8, type: 3}
   - {fileID: 21300000, guid: f1d027d10e92eb644aa8230342a98734, type: 3}
-  - {fileID: 21300000, guid: a639c0e16dae7074ba6aaa3cf890f1ee, type: 3}
   - {fileID: -7124971768341422441, guid: fd8c609291bd81648a5dc46d52ea1e0b, type: 3}
   - {fileID: -3915173295016451208, guid: fd8c609291bd81648a5dc46d52ea1e0b, type: 3}
   - {fileID: 6270227803560796669, guid: fd8c609291bd81648a5dc46d52ea1e0b, type: 3}
@@ -107,7 +114,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a67ae3b3b2ac784409511331f6696aaa, type: 3}
   - {fileID: 21300000, guid: 66c2ffc3f2e6e5144a71b3b2450d8cfe, type: 3}
   - {fileID: 21300000, guid: d3a3e7444d313f84d80c37769747b98f, type: 3}
-  - {fileID: 21300000, guid: 4241165485738cd4396dddc81145bd5c, type: 3}
   - {fileID: 21300000, guid: 4a07b874a8975fd44a595cff3097aafa, type: 3}
   - {fileID: 21300000, guid: afee3aa4822ef2b48b117839051a890c, type: 3}
   - {fileID: 21300000, guid: a28234b46bbb08546b7d3f1e0fbe4873, type: 3}
@@ -156,11 +162,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b60eb6365beadb949bc3e2267b720d3a, type: 3}
   - {fileID: 21300000, guid: d8863446a6e944447992fc59fc3a2c3f, type: 3}
   - {fileID: 21300000, guid: a0bb27466c16821469dedcb2c4ed4ec8, type: 3}
-  - {fileID: 8091971119966832508, guid: 0bb43b46f70546c44b7db93fb53a4aea, type: 3}
-  - {fileID: -5863021752696886355, guid: 0bb43b46f70546c44b7db93fb53a4aea, type: 3}
-  - {fileID: 529192764566051817, guid: 0bb43b46f70546c44b7db93fb53a4aea, type: 3}
-  - {fileID: 639984006411281095, guid: 0bb43b46f70546c44b7db93fb53a4aea, type: 3}
-  - {fileID: 4418842785809957462, guid: 0bb43b46f70546c44b7db93fb53a4aea, type: 3}
   - {fileID: 21300000, guid: f80e2766ba7f9314ea0d858c5065350d, type: 3}
   - {fileID: 21300000, guid: 9f0636763c84f6e43bc2b1b47a945426, type: 3}
   - {fileID: 21300000, guid: d00c7f763dcc7c242a661a9652669826, type: 3}
@@ -171,7 +172,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a3e485b771bdb6e49884700990d5d4ba, type: 3}
   - {fileID: 21300000, guid: a380b8d7bbc1bb940ac728f985d10146, type: 3}
   - {fileID: 21300000, guid: b7d64d282124d94488f7b58f629073bb, type: 3}
-  - {fileID: 21300000, guid: 88b26bb87a42ef6419678aa2c34ef770, type: 3}
   - {fileID: 21300000, guid: cb416fd861b92c348a033e755f23e79e, type: 3}
   - {fileID: 21300000, guid: fa7070f8bcd8d8a4bb27a3086a552d5b, type: 3}
   - {fileID: 21300000, guid: 4e67c6f84021c784fa20e30c38cbca5c, type: 3}
@@ -211,7 +211,6 @@ SpriteAtlas:
   - {fileID: -7700499627484314925, guid: 7895e5897f60b9e42ad046dad1d4e865, type: 3}
   - {fileID: -383523194990117414, guid: 7895e5897f60b9e42ad046dad1d4e865, type: 3}
   - {fileID: 8057060550430891568, guid: 7895e5897f60b9e42ad046dad1d4e865, type: 3}
-  - {fileID: 21300000, guid: 6b86949949ea85e4bb72d1f7867f6571, type: 3}
   - {fileID: 21300000, guid: d64a47d9829421f4283e1aa496a20eab, type: 3}
   - {fileID: 21300000, guid: 5bda0e2a6fc5d4442859e67cc5c2ec1e, type: 3}
   - {fileID: 21300000, guid: dfca314ae1203204898ebb717c71c1f5, type: 3}
@@ -344,10 +343,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 11535dbe310fc36498a0afab78f66729, type: 3}
   - {fileID: 21300000, guid: 4cddcfbe761381c499acc4392c628244, type: 3}
   - {fileID: 21300000, guid: 319380eecf43f1a4c941cec174679af8, type: 3}
-  - {fileID: 21300000, guid: 25ff94fe89fe58f479501a3a56910bb2, type: 3}
   - {fileID: 21300000, guid: c0bf412f46264684aaa87cdb76aef514, type: 3}
   - {fileID: 21300000, guid: 970ccbaf403226849a3ca8504f777165, type: 3}
-  - {fileID: 21300000, guid: 8cec29bfd9a0a7a4a8f776438851f95c, type: 3}
   - {fileID: 21300000, guid: ded025cf0f7df3e40bfad17d668c49c0, type: 3}
   - {fileID: 21300000, guid: ff2d07dfdf0ef714f8c6bc99cf5e2c7f, type: 3}
   - {fileID: 21300000, guid: b47d5adf34924944a894c54432dfb52f, type: 3}
@@ -362,14 +359,12 @@ SpriteAtlas:
   - hook
   - ground
   - Transparent jellyfishFrame5
-  - cockpit lower
   - Alien Spider Frame1
   - Alien Spider Frame2
   - Rolling thingFrame10
   - generic-laser
   - Slug Frame5
   - spinning-blade
-  - jupiter-block
   - Ruin Building tileset_8
   - Ruin Building tileset_9
   - Ruin Building tileset_2
@@ -422,7 +417,6 @@ SpriteAtlas:
   - Slug Frame7
   - Astronaut IdleFrame2
   - Transparent jellyfishFrame4
-  - star background
   - Slug Frame6
   - Transparent jellyfishFrame1
   - Astronaut IdleFrame3
@@ -471,11 +465,6 @@ SpriteAtlas:
   - Rolling thingFrame11
   - Alien Spider Frame3
   - Astronaut Run Frame1
-  - blueplanet-block_0
-  - blueplanet-block_1
-  - blueplanet-block_2
-  - blueplanet-block_3
-  - blueplanet-block_4
   - Slug Frame4
   - Astronaut Run Frame4
   - Astronaut Jump2
@@ -486,7 +475,6 @@ SpriteAtlas:
   - pickup
   - Alien Spider Frame6
   - square - Copy
-  - hook-link
   - Slug 1
   - Alien Spider Frame5
   - Transparent jellyfishFrame7
@@ -526,7 +514,6 @@ SpriteAtlas:
   - Grass Tileset2_5
   - Grass Tileset2_8
   - Grass Tileset2_9
-  - cockpit top
   - Rolling thingFrame3
   - Rolling thing
   - Slug Frame8
@@ -659,10 +646,8 @@ SpriteAtlas:
   - patrol-enemy
   - Flying bug
   - Rolling thingFrame5
-  - ship pixellated
   - Astronaut Run Frame5
   - Rolling thingFrame13
-  - forestlevel3background
   - Astronaut Jump1
   - chase-enemy
   - Rolling thingFrame12

@@ -939,7 +939,7 @@ MonoBehaviour:
   options: {fileID: 2131336048}
   optionsPanel: {fileID: 4655152691487773815}
   audio: {fileID: 1614270902}
-  pauseSound: {fileID: 8300000, guid: e06932ea0ae6ec74a84741904af57ed1, type: 3}
+  pauseSound: {fileID: 8300000, guid: aff0d283135f943bfac85c5a2752ad7f, type: 3}
 --- !u!1 &1268549136
 GameObject:
   m_ObjectHideFlags: 0

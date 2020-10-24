@@ -6461,7 +6461,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 5545929407860964994, guid: 76f8f4e46050cad438ad086fffa4725e, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 1874543760d358147a73af3518f808fa, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d70cd1fb8fdc945d7a9df4d054b18c7b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9650,8 +9650,8 @@ MonoBehaviour:
   _fromOptionsToStart: {fileID: 0}
   _fromCreditsToStart: {fileID: 0}
   sfx: {fileID: 1839323257}
-  cancel: {fileID: 8300000, guid: 096e6c895bc091b4c87b18d90043245b, type: 3}
-  confirm: {fileID: 8300000, guid: e453baf1040f95e4b82e7a64eee2a075, type: 3}
+  cancel: {fileID: 8300000, guid: b8280bd5e26024e3684116778f3734ea, type: 3}
+  confirm: {fileID: 8300000, guid: 69f4d094619ee4fe8aede233d88fc778, type: 3}
   navigate: {fileID: 0}
 --- !u!114 &1979617536
 MonoBehaviour:
@@ -9711,7 +9711,7 @@ MonoBehaviour:
   fadeInSpeed: 0.005
   mainCanvas: {fileID: 19824457}
   sfx: {fileID: 1839323257}
-  confirm: {fileID: 8300000, guid: e453baf1040f95e4b82e7a64eee2a075, type: 3}
+  confirm: {fileID: 8300000, guid: 69f4d094619ee4fe8aede233d88fc778, type: 3}
 --- !u!1 &2052026875
 GameObject:
   m_ObjectHideFlags: 0

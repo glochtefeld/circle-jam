@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b69d2ae2ebcf74fb356008819efa31, type: 3}
   m_Name: Forest
   m_EditorClassIdentifier: 
-  intro: {fileID: 8300000, guid: d106ae11a3bf8b34aa1e125089f66489, type: 3}
-  mainLoop: {fileID: 8300000, guid: db3fda75785c78f4abe2d48ad27017e2, type: 3}
+  intro: {fileID: 8300000, guid: 53ba0605d0be8410ba6c20c6bc42ecf8, type: 3}
+  mainLoop: {fileID: 8300000, guid: 28316818e7d6e41b2afa6b005b2f8cab, type: 3}

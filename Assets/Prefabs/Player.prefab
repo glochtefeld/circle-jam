@@ -318,15 +318,15 @@ MonoBehaviour:
   city: {fileID: 11400000, guid: c91022f5476d68540a8618072c332486, type: 2}
   sky: {fileID: 11400000, guid: 5506ba4b7c854094e8380b211b384f65, type: 2}
   sfx: {fileID: 7910492376869209792}
-  death: {fileID: 8300000, guid: 982e755d8ef63c94ab1c7667c944eca0, type: 3}
-  hookCollideFail: {fileID: 8300000, guid: 889279f2e4a218b48b4ca3935cd46998, type: 3}
-  hookCollideSuccess: {fileID: 8300000, guid: 527e0c438b51f204584ec04d0e68d0d9, type: 3}
-  hookFire: {fileID: 8300000, guid: e310b7d7ca67ad54c9b2d4ee480ef5f0, type: 3}
-  jump: {fileID: 8300000, guid: f4cd82508dde3084e97674405f6230e9, type: 3}
-  swing: {fileID: 8300000, guid: e2f9eacaea1496c4aace9415c1d729c5, type: 3}
-  land: {fileID: 8300000, guid: f80d95b270b06a14495eaf0e4784c7c0, type: 3}
-  getTreasure: {fileID: 8300000, guid: 07b9ed0629681604898f8f1c777f5ba7, type: 3}
-  splash: {fileID: 8300000, guid: 71ca2365f45e8594589f715795d08c1e, type: 3}
+  death: {fileID: 8300000, guid: 4c78fd0ffb3a74cb7b8d6f817ac4836f, type: 3}
+  hookCollideFail: {fileID: 8300000, guid: 509e0d332e5424fd5bcef82c20ce028f, type: 3}
+  hookCollideSuccess: {fileID: 8300000, guid: 92f9f271e536e4601800e5c3bdd9b88e, type: 3}
+  hookFire: {fileID: 8300000, guid: ba63745115f434626a17ef354e5f4e95, type: 3}
+  jump: {fileID: 8300000, guid: f1ad9afa4a9b347079187cac4339dc15, type: 3}
+  swing: {fileID: 8300000, guid: d40782b8ef48646ad82c620c15e40e9b, type: 3}
+  land: {fileID: 8300000, guid: 86f5bc4df3ac74ebdb5096cac91575d5, type: 3}
+  getTreasure: {fileID: 8300000, guid: 72b139913bda241c980a6acf73b8726c, type: 3}
+  splash: {fileID: 8300000, guid: cebcb7a51977a413185b8eecda038341, type: 3}
 --- !u!1 &2174720500433340312
 GameObject:
   m_ObjectHideFlags: 0

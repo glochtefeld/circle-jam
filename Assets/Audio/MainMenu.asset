@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MainMenu
   m_EditorClassIdentifier: 
   intro: {fileID: 0}
-  mainLoop: {fileID: 8300000, guid: 1874543760d358147a73af3518f808fa, type: 3}
+  mainLoop: {fileID: 8300000, guid: d70cd1fb8fdc945d7a9df4d054b18c7b, type: 3}

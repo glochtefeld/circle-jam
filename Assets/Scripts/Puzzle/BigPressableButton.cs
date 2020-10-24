@@ -35,8 +35,13 @@ public class BigPressableButton : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<BasePlayer>() == null)
+        var player = collision.GetComponent<BasePlayer>();
+        if (player == null)
             return;
+
+        // Not ideal but oh well
+        player.audioControl.PlaySFX(SFX.ButtonPress);
+
         switch (buttonType)
         {
             case ButtonType.Door:

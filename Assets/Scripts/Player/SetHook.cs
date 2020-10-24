@@ -5,10 +5,12 @@ public class SetHook : MonoBehaviour
 {
     public DistanceJoint2D hookLine;
     public LineRenderer line;
+    public Transform arm;
 
     private bool _swinging;
     private Vector3 _potentialPosition;
     private HookTarget _potentialHTarget;
+
     public void Update()
     {
         if (_potentialHTarget != null)
@@ -18,7 +20,7 @@ public class SetHook : MonoBehaviour
         if (_swinging)
             line.SetPositions(new Vector3[]
             {
-                transform.position,
+                arm.transform.position,
                 _potentialPosition
             });
     }

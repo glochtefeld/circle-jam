@@ -12,7 +12,9 @@ public enum SFX
     Swing,
     Land,
     GetTreasure,
-    Splash
+    Splash,
+    LevelEnd,
+    ButtonPress
 }
 
 public enum BGM
@@ -44,6 +46,8 @@ public class AudioControl : MonoBehaviour
     public AudioClip land;
     public AudioClip getTreasure;
     public AudioClip splash;
+    public AudioClip levelEnd;
+    public AudioClip buttonPress;
 #pragma warning restore CS0649
 #endregion
     
@@ -78,6 +82,12 @@ public class AudioControl : MonoBehaviour
             case SFX.Splash:
                 PlaySFX(splash,loop);
                     break;
+            case SFX.LevelEnd:
+                PlaySFX(levelEnd, loop);
+                break;
+            case SFX.ButtonPress:
+                PlaySFX(buttonPress, loop);
+                break;
         }
     }
 
@@ -149,6 +159,8 @@ public class AudioControl : MonoBehaviour
         }
         yield return null;
     }
+
+    public void StopMusic() => bgm.Stop();
 
 #if DIAGNOSTIC_MODE
     private void OnGUI()

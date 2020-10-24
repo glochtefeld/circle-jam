@@ -27,7 +27,7 @@ public class TakeoffRoutine : MonoBehaviour
     {
         cg = GameObject.Find("/Canvas").transform.GetChild(0)
             .GetComponent<CanvasGroup>();
-        audioControl = GameObject.Find("/Player").transform.GetComponentInChildren<AudioControl>();
+        audioControl = GameObject.Find("/Player").GetComponent<BasePlayer>().audioControl;
     }
 
     void Update()
@@ -47,23 +47,28 @@ public class TakeoffRoutine : MonoBehaviour
 
     private IEnumerator FlyAwayAndEndLevel()
     {
-        Destroy(MusicAssigner.Instance);
+        audioControl.StopMusic();
+        audioControl.PlaySFX(SFX.LevelEnd);
+        if (MusicAssigner.Instance != null)
+            Destroy(MusicAssigner.Instance);
         Debug.Log($"Starting ");
         animator.Play("Takeoff");
         idle.Pause();
         idle.gameObject.SetActive(false);
         var player = GameObject.Find("Player");
-        player.SetActive(false);
+        player.GetComponent<BasePlayer>().EndOfLevel();
         var time = 0f;
+        // Time for 10 frames of floating upwards
         while (time < 0.417f)
         {
             time += Time.deltaTime;
             transform.position = new Vector3(
                 transform.position.x,
-                transform.position.y + 0.001f,
+                transform.position.y + 0.01f,
                 transform.position.z);
             yield return null;
         }
+        // approximate time for rotation
         yield return new WaitForSeconds(2f);
         animator.enabled = false;
         takeOff.Play();

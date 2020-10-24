@@ -33,12 +33,18 @@ namespace WOB.Player
         public AudioControl audioControl;
         [Header("Animation")]
         public Animator anim;
+        [Header("Renderers")]
+        public SpriteRenderer main;
+        public SpriteRenderer arm;
+        public LineRenderer hookLineRenderer;
+
         #endregion
         
         private IPlayerMovement movement;
         private bool _hookWasShot;
         private bool _hooked;
         private bool _dead;
+        private bool _levelOver;
         public int Score { set; get; }
 
         private float ratio;
@@ -57,6 +63,8 @@ namespace WOB.Player
 
         private void FixedUpdate()
         {
+            if (_levelOver)
+                return;
             movement.Move(input.ReadInput());
             if (input.Mouse() && !_hookWasShot)
                 ShootHook();
@@ -71,6 +79,18 @@ namespace WOB.Player
             }
         }
         #endregion
+
+        public void EndOfLevel()
+        {
+            // Set all renderers to false
+            main.enabled = false;
+            arm.enabled = false;
+            hookLineRenderer.enabled = false;
+            GetComponent<Rigidbody2D>().constraints =
+                RigidbodyConstraints2D.FreezeAll;
+            _levelOver = true;
+        }
+
 
         public void Kill()
         {
@@ -143,7 +163,7 @@ namespace WOB.Player
             // Instantiate hook
             var hook = Instantiate(
                 hookObject,
-                transform.position,
+                arm.transform.position,
                 RotateArmForHookshot.Angle);
             // Add force to hook instance in direction
             hook.GetComponent<Rigidbody2D>().AddForce(
@@ -167,7 +187,7 @@ namespace WOB.Player
 
                 line.SetPositions(new Vector3[]
                 {
-                    transform.position,
+                    arm.transform.position,
                     hook.transform.position
                 });
                 yield return null;
@@ -196,18 +216,18 @@ namespace WOB.Player
                 while (
                     Vector2.Distance(
                         hook.transform.position,
-                        transform.position) 
+                        arm.transform.position) 
                     > 0.05f)
                 {
                     time += Time.deltaTime;
                     ratio = time / returnLerpTime;
                     hook.transform.position = Vector2.Lerp(
                         hook.transform.position,
-                        transform.position,
+                        arm.transform.position,
                         ratio);
                     line.SetPositions(new Vector3[]
                     {
-                        transform.position,
+                        arm.transform.position,
                         hook.transform.position
                     });
                     yield return null;

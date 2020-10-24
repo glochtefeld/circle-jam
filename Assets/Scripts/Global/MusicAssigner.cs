@@ -10,7 +10,6 @@ public class MusicAssigner : MonoBehaviour
 #endregion
 
     public static MusicAssigner Instance { set; get; }
-    #region Monobehaviour
     void Start()
     {
         if (Instance == null)
@@ -22,17 +21,4 @@ public class MusicAssigner : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
-    void Update()
-    {
-        
-    }
-#endregion
-
-#if DIAGNOSTIC_MODE
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(0, 0, 100, 25),$"");
-    }
-#endif
 }

@@ -325,8 +325,10 @@ MonoBehaviour:
   jump: {fileID: 8300000, guid: f1ad9afa4a9b347079187cac4339dc15, type: 3}
   swing: {fileID: 8300000, guid: d40782b8ef48646ad82c620c15e40e9b, type: 3}
   land: {fileID: 8300000, guid: 86f5bc4df3ac74ebdb5096cac91575d5, type: 3}
-  getTreasure: {fileID: 8300000, guid: 72b139913bda241c980a6acf73b8726c, type: 3}
+  getTreasure: {fileID: 8300000, guid: 96d1bfdfec7bd4c2996c14d852988c0e, type: 3}
   splash: {fileID: 8300000, guid: cebcb7a51977a413185b8eecda038341, type: 3}
+  levelEnd: {fileID: 8300000, guid: 72b139913bda241c980a6acf73b8726c, type: 3}
+  buttonPress: {fileID: 8300000, guid: 007561c0d203a4333bd7de3b5c2e3699, type: 3}
 --- !u!1 &2174720500433340312
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,10 +768,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 2525578844489591344}
   mover: {fileID: 2525578842563056640}
-  hookForce: 6
+  hookForce: 20
   cooldownTime: 0
   speed: 0
-  maxHookTime: 1
+  maxHookTime: 0.25
   hookObject: {fileID: 7800890267744643274, guid: 33c82d07b7010f24e883fb688af5ee76, type: 3}
   returnLerpTime: 1.3
   hookController: {fileID: 804885687}
@@ -778,6 +780,9 @@ MonoBehaviour:
   fadeRate: 0.3
   audioControl: {fileID: 921208453093261491}
   anim: {fileID: 78722786}
+  main: {fileID: 2525578844489591349}
+  arm: {fileID: 2081820192}
+  hookLineRenderer: {fileID: 134825439}
 --- !u!232 &995897872
 DistanceJoint2D:
   m_ObjectHideFlags: 0

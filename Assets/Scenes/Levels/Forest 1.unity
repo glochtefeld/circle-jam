@@ -656,29 +656,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1022245402}
     m_Modifications:
-    - target: {fileID: 1776773072208163573, guid: e6a7056f532d36247bd0b5dd23ff0c5c, type: 3}
-      propertyPath: m_Offset.x
-      value: 5.747057
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776773072208163573, guid: e6a7056f532d36247bd0b5dd23ff0c5c, type: 3}
-      propertyPath: m_Size.x
-      value: 14.917641
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776773072208163573, guid: e6a7056f532d36247bd0b5dd23ff0c5c, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.7342142
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776773072208163573, guid: e6a7056f532d36247bd0b5dd23ff0c5c, type: 3}
-      propertyPath: m_Size.y
-      value: 1.5703747
-      objectReference: {fileID: 0}
     - target: {fileID: 3986471385233794467, guid: e6a7056f532d36247bd0b5dd23ff0c5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 104.27
       objectReference: {fileID: 0}
     - target: {fileID: 3986471385233794467, guid: e6a7056f532d36247bd0b5dd23ff0c5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.95
+      value: -4.65
       objectReference: {fileID: 0}
     - target: {fileID: 3986471385233794467, guid: e6a7056f532d36247bd0b5dd23ff0c5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4665,6 +4649,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 14
       m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 52, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9566,7 +9560,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f296b08c622618b4cb32668df3bc55f0, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: baff2ba0cc38d1943aafe76ca46f5777, type: 2}
-  - m_RefCount: 97
+  - m_RefCount: 98
     m_Data: {fileID: 11400000, guid: 0ee76c2bf2f21034b92d39628ec2331d, type: 2}
   - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: ceeb5b3adb1337942951a255fff25c1a, type: 2}
@@ -9619,7 +9613,7 @@ Tilemap:
     m_Data: {fileID: -7378623469862069198, guid: 7895e5897f60b9e42ad046dad1d4e865, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: -5331803040402921797, guid: 7895e5897f60b9e42ad046dad1d4e865, type: 3}
-  - m_RefCount: 97
+  - m_RefCount: 98
     m_Data: {fileID: -8747447268318683474, guid: 7895e5897f60b9e42ad046dad1d4e865, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: -2586938473459176338, guid: 7895e5897f60b9e42ad046dad1d4e865, type: 3}
@@ -9648,7 +9642,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 230953870290747585, guid: 7895e5897f60b9e42ad046dad1d4e865, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 856
+  - m_RefCount: 857
     m_Data:
       e00: 1
       e01: 0
@@ -9667,7 +9661,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 856
+  - m_RefCount: 857
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -10023,6 +10017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patrol-enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1320227513755673658, guid: 8f234e178429be3419d25cbaf0a20551, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2949567859993157828, guid: 8f234e178429be3419d25cbaf0a20551, type: 3}
       propertyPath: m_LocalPosition.x
       value: 92.6
@@ -10226,7 +10224,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 21.049961, y: 1.3076357}
+  m_Size: {x: 23.414854, y: 1.3076357}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10240,8 +10238,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891279393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.85, y: 0.95, z: 0}
-  m_LocalScale: {x: 10.24869, y: 10.509761, z: 1}
+  m_LocalPosition: {x: 90, y: 1, z: 0}
+  m_LocalScale: {x: 10, y: 10.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -10852,6 +10850,10 @@ PrefabInstance:
     - target: {fileID: 71728330637253733, guid: 8f234e178429be3419d25cbaf0a20551, type: 3}
       propertyPath: m_Name
       value: Patrol-enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320227513755673658, guid: 8f234e178429be3419d25cbaf0a20551, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 2949567859993157828, guid: 8f234e178429be3419d25cbaf0a20551, type: 3}
       propertyPath: m_LocalPosition.x

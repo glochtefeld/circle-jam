@@ -14,10 +14,11 @@ public class Pickup : MonoBehaviour
     #region Monobehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Player" || _addedPoint)
+        var player = collision.GetComponent<BasePlayer>();
+        if (player == null || _addedPoint)
             return;
-        collision.gameObject.GetComponent<BasePlayer>()
-            .AddPoints();
+        player.AddPoints();
+        player.audioControl.PlaySFX(SFX.GetTreasure);
         _addedPoint = true;
         Destroy(gameObject);
     }

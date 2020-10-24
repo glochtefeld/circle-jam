@@ -26,7 +26,6 @@ public class PauseMenu : MonoBehaviour
         resume.onClick.AddListener(() =>
         {
             Resume();
-            optionsPanel.SetActive(false);
         });
         quitToMenu.onClick.AddListener(() =>
         Application.Quit());
@@ -52,6 +51,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        optionsPanel.SetActive(false);
         Time.timeScale = 1f;
         PauseGame = false;
     }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b69d2ae2ebcf74fb356008819efa31, type: 3}
   m_Name: City
   m_EditorClassIdentifier: 
-  intro: {fileID: 0}
+  intro: {fileID: 8300000, guid: c303034dbd2cc4ce48ee2ce485a847e9, type: 3}
   mainLoop: {fileID: 8300000, guid: aba482fd5759d41a9b1097a593eab095, type: 3}

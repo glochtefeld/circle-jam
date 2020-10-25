@@ -22,14 +22,15 @@ namespace WOB.Player.Movement
         [Header("Vertical Speed")]
         public float verticalSpeed;
         #endregion
+        public SpriteRenderer player;
         private const int _pixelSize = 50;
         private Vector3 _velocity;
-
+        private bool _facingRight = true;
         #region Monobehaviour
         // Start is called before the first frame update
         void Start()
         {
-
+            
         }
 
         // Update is called once per frame
@@ -42,6 +43,8 @@ namespace WOB.Player.Movement
         #region IPlayerMovement
         public void Move(Vector2 direction)
         {
+
+
             var target = new Vector2();
             target.x = direction.x
                 * horizontalSpeed
@@ -57,7 +60,17 @@ namespace WOB.Player.Movement
                 target,
                 ref _velocity,
                 movementSmoothing);
+
+            if ((direction.x > 0 && !_facingRight)
+                    || (direction.x < 0 && _facingRight))
+                Flip();
         }
         #endregion
+
+        private void Flip()
+        {
+            player.flipX = _facingRight;
+            _facingRight = !_facingRight;
+        }
     }
 }

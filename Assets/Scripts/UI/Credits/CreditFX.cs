@@ -9,8 +9,9 @@ public class CreditFX : MonoBehaviour
 #pragma warning disable CS0649
     public GameObject creditsPanel;
 #pragma warning restore CS0649
-#endregion
+    #endregion
 
+    private Vector3 _velocity;
 #region Monobehaviour
     void Start()
     {
@@ -25,16 +26,17 @@ public class CreditFX : MonoBehaviour
 
     private IEnumerator ScrollupSlowly()
     {
+        var target = new Vector3(0, 1f, 0);
         yield return new WaitForSeconds(3f);
         var time = 0f;
-        while (time < 60f)
+        while (Vector3.Distance(creditsPanel.transform.position, target) > 0.01f)
         {
-            time += Time.fixedDeltaTime;
+            time += Time.deltaTime;
+            var ratio = time / 300f;
             creditsPanel.transform.position =
-                new Vector3(
-                    creditsPanel.transform.position.x,
-                    creditsPanel.transform.position.y + 0.003f,
-                    creditsPanel.transform.position.z);
+                Vector3.Lerp(creditsPanel.transform.position,
+                target,
+                ratio);
             yield return null;
         }
         yield return new WaitForSeconds(5f);

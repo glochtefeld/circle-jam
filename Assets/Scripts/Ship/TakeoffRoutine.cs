@@ -76,7 +76,7 @@ public class TakeoffRoutine : MonoBehaviour
         Camera.main.GetComponent<SmoothCameraMovement>()
             .Player = gameObject;
         time = 0;
-        var rate = 0.001f;
+        var rate = 0.01f;
         cg.gameObject.SetActive(true);
         while (time < 3f)
         {

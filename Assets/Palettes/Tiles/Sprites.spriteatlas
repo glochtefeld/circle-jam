@@ -41,7 +41,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 62a51c69912ab1e4eb16488d5f8e9207, type: 3}
     - {fileID: 2800000, guid: a3e485b771bdb6e49884700990d5d4ba, type: 3}
     - {fileID: 2800000, guid: f1d027d10e92eb644aa8230342a98734, type: 3}
-    totalSpriteSurfaceArea: 747536
+    totalSpriteSurfaceArea: 748976
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -166,6 +166,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9f0636763c84f6e43bc2b1b47a945426, type: 3}
   - {fileID: 21300000, guid: d00c7f763dcc7c242a661a9652669826, type: 3}
   - {fileID: 21300000, guid: 86b61ba69f75503488c9b48b933a2204, type: 3}
+  - {fileID: 21300000, guid: 4980b6d6655759c4aa33f2a506842efb, type: 3}
   - {fileID: 21300000, guid: 0aa552170f983f44a92eab540d1eb977, type: 3}
   - {fileID: 21300000, guid: 541365176c638c449820cbcd5c9f3983, type: 3}
   - {fileID: 21300000, guid: 774afa47dd10ebf49bb9f1682a6382a4, type: 3}
@@ -325,6 +326,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e4c611cb3ad5fdb4bb9a9a45286ade6a, type: 3}
   - {fileID: 21300000, guid: 6d5d84db5e609df418bfe47deca4b42c, type: 3}
   - {fileID: 21300000, guid: c7335b6c8b78e144da82a38bc9d7f8cf, type: 3}
+  - {fileID: 21300000, guid: ed9dd37cffa75204f92f7681c0ba3f09, type: 3}
   - {fileID: 21300000, guid: 5babfd8c073cdfc45bb8e4226f9ce480, type: 3}
   - {fileID: 21300000, guid: 9c6a41ac4e0141f47b4e839a21c037d8, type: 3}
   - {fileID: 21300000, guid: 31b1b1cca48519d47b79b6e9c4c8d919, type: 3}
@@ -469,6 +471,7 @@ SpriteAtlas:
   - Astronaut Run Frame4
   - Astronaut Jump2
   - Astronaut IdleFrame1
+  - Astronaut swim 2
   - moving-hooktarget
   - depressed-button
   - Transparent jellyfishFrame8
@@ -628,6 +631,7 @@ SpriteAtlas:
   - Flying bug1
   - Astronaut Run FINAL.2
   - Astronaut Jump
+  - Astronaut swim 1
   - Rolling thingFrame8
   - teleport-pad
   - Water-temp
